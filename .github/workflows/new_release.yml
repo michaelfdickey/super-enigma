@@ -40,10 +40,10 @@ jobs:
         run: |
           curl \
           -X POST \
-          -H "Accept: application/vnd.github.v3+json" \
+          -H "content-type: application/json" \
           -H "authorization: Bearer $GITHUB_TOKEN" \
           https://api.github.com/repos/michaelfdickey/super-enigma/releases \
           -d "{
-            \"tag_name\": \"1.8\",
+            \"tag_name\": \"1.9\",
             \"body\": \"$RELEASE_MESSAGE\"
           }"
